@@ -1,0 +1,17 @@
+{
+  "id": "module-fpnotes",
+  "displayName": "Notes",
+  "version": "1.0.0",
+  "remoteEntry": "/remoteEntry.js",
+  "exposes": { "Module": "./src/index.ts" },
+  "routes": ["/notes"],
+  "nav": {
+    "label": "Notes",
+    "icon": "notes",
+    "order": 20
+  },
+  "scopes": ["openid", "profile", "email"],
+  "compose": "docker-compose.yml",
+  "provides": ["notes:shared"],
+  "consumes": ["contacts:picked"]
+}
