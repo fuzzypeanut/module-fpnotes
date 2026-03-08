@@ -66,7 +66,7 @@
 
   async function unshare(sharedWithId: string) {
     await api.unshareNote(note.id, sharedWithId);
-    const updatedNote = { ...note, shares: note.shares.filter(s => s.shared_with_id !== sharedWithId) };
+    const updatedNote = { ...note, shares: note.shares.filter(s => s.id !== sharedWithId) };
     on_update(updatedNote);
   }
 </script>
@@ -123,7 +123,7 @@
           <div class="share-row">
             <span class="share-email">{share.shared_with_email}</span>
             <span class="share-perm">{share.permission}</span>
-            <button class="remove-btn" onclick={() => unshare(share.shared_with_id)}>Remove</button>
+            <button class="remove-btn" onclick={() => unshare(share.id)}>Remove</button>
           </div>
         {/each}
       </div>

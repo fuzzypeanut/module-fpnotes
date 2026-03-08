@@ -59,5 +59,5 @@ export const deleteTodo  = (noteId: string, todoId: string) =>
 
 export const shareNote   = (noteId: string, data: ShareNoteInput) =>
   request<NoteShare>('POST', `/notes/${noteId}/share`, data);
-export const unshareNote = (noteId: string, sharedWithId: string) =>
-  request<void>('DELETE', `/notes/${noteId}/share/${sharedWithId}`);
+export const unshareNote = (noteId: string, shareId: string) =>
+  request<void>('DELETE', `/notes/${noteId}/share/${shareId}`);

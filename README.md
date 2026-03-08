@@ -20,7 +20,7 @@ Google Keep-style notes module for [FuzzyPeanut](https://github.com/fuzzypeanut)
 | Layer | Technology |
 |---|---|
 | Frontend | Svelte 5 (runes), Vite library mode |
-| Backend | Python 3.12 / FastAPI / asyncpg |
+| Backend | Rust / axum 0.8 / sqlx 0.8 |
 | Database | PostgreSQL 16 |
 | Auth | Authentik OIDC (via `@fuzzypeanut/sdk`) |
 
